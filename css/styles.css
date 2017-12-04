@@ -1,0 +1,225 @@
+
+/*Making Page Unscrollable*/
+html {
+width: 100%;
+height: 100%;
+clip: auto;
+position: absolute;
+overflow: hidden;
+}
+
+h3{
+	font-size:24px;
+	color:#2d2a26;
+	font-family:'Amatic SC', cursive;;
+	text-align:center;
+	margin-top:55px;
+}
+
+body{
+	background:#ccc url(../images/34.jpg);
+	background-size:cover;
+	background-position: center center;
+	font-size: 14px;
+	padding:0;
+	margin:0;
+
+}
+
+h1{
+	color:#fff;
+	margin-top:30px;
+	font-size:38px;
+	font-weight:bold;
+	font-family:'Amatic SC', cursive;
+	text-align:center;
+}
+
+.title{
+	font-size: 22px;
+	text-align: center;
+	margin-top: 45px;
+	margin-left: 120px;
+	margin-right: 100px;
+    font-family:'Amatic SC', cursive;
+	letter-spacing: 2px;
+	border-bottom: 1px solid black;
+	width:150px;
+	
+
+}
+.wish{
+	height:100px;
+	width:100px;
+	background-color: white;
+	font-size:12px;
+}
+
+.first{
+	font-weight: bold;
+	color:green;
+	font-size:22px;
+	font-family: 'Bad Script', cursive;
+	
+}
+p{
+	font-family: 'Amatic SC', cursive;
+	text-align:center;
+	font-size:25px;
+}
+
+
+.signature{
+	font-size:20px;
+	font-weight: bold;
+	text-align:right;
+}
+
+.booklet .b-wrap-left  {
+	background:#fff url(../images/space3.jpg) no-repeat center;
+	background-size:120%;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-topleft:10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.booklet .b-wrap-right {
+	background:#fff url(../images/space3.jpg) no-repeat top left;
+	background-size:120%;
+
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.book_wrapper{
+	/**margin:220px 850px 200px;**/
+	margin-top:10%;
+	/*margin-left:40%;*/
+	margin-right:auto;
+	float:right;
+	padding-top:50px;
+	width:905px;
+	height:540px;
+	
+	
+	background:transparent url(../images/bg.png) no-repeat 9px 27px;
+}
+.book_wrapper h1{
+	color:#ff;
+	margin:25px 5px 5px 15px;
+	font-size:35px;
+	background:transparent url(../images/h1.png) no-repeat bottom left;
+	padding-bottom:7px;
+ font-family: 'Calligraffitti', cursive;
+ font-weight:bold;
+	letter-spacing:5px;
+}
+.book_wrapper p.wish{
+	font-size:15px;
+	font-weight:bold;
+	text-align:justify;
+	margin:30px 5px 5px 15px;
+	width:350px;
+	height:210px;
+	background-color: white;
+	line-height:1.5;
+	font-family: 'Bad Script', cursive;
+	letter-spacing: 3px;
+	line-height: 150%;
+	}
+
+	.book_wrapper p.wish2{
+		font-size:15px;
+		font-weight:bold;
+		text-align:justify;
+		margin:90px 5px 5px 15px;
+		width:350px;
+		height:153px;
+		background-color: white;
+		line-height:1.5;
+		font-family: 'Bad Script', cursive;
+		}
+
+.person{
+	margin-top: 45px;
+	margin-bottom: 5px;
+}
+
+.book_wrapper a.article,
+.book_wrapper a.demo{
+	background:transparent url(../images/23.png)  no-repeat 50% 0px;
+	display:block;
+	width:95px;
+	height:41px;
+	text-decoration:none;
+	outline:none;
+	font-size:22px;
+	font-family: 'Amatic SC', cursive;
+	color:#555;
+	margin: 100px auto;
+	line-height:51px;
+	letter-spacing: 3px;
+}
+
+.book_wrapper a.article:hover,
+.book_wrapper a.demo:hover{
+	/*background-position:50% -41px;*/
+	color:green;
+	font-weight:bold;
+}
+.book_wrapper img{
+	margin:5px 62px 5px 62px;
+	width:265px;
+	height:360px;
+	padding:4px;
+	border:1px solid #ddd;
+	-moz-box-shadow:1px 1px 1px #fff;
+	-webkit-box-shadow:1px 1px 1px #fff;
+	box-shadow:1px 1px 1px #000;
+}
+
+#masha {
+width:235px;
+height:360px;	
+}
+.booklet .b-wrap-right img{
+	border:1px solid #E6E3C2;
+}
+
+.booklet .b-wrap-left img{
+	border:1px solid #fff;
+
+}
+
+
+.loading{
+	width:160px;
+	height:56px;
+	position: absolute;
+	top:50%;
+	margin-top:-28px;
+	right:135px;
+	line-height:56px;
+	color:#fff;
+	padding-left:60px;
+	font-size:15px;
+	background: #000 url(../images/ajax-loader.gif) no-repeat 10px 50%;
+	opacity: 0.7;
+	z-index:9999;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border-radius:20px;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+
+
+.back{
+	margin-top: 170px;
+	font-weight: bold;
+}

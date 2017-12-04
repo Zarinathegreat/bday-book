@@ -1,0 +1,161 @@
+<html>
+<head>
+     <meta charset="utf-8">
+< <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="booklet/jquery.easing.1.3.js" type="text/javascript"></script>
+    <script src="booklet/jquery.booklet.latest.js" type="text/javascript"></script>
+
+    <link href="booklet/jquery.booklet.latest.css" type="text/css" rel="stylesheet" media="screen, projection, tv" />
+    <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen"/>
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Bad+Script|Caveat" rel="stylesheet">
+
+
+
+	<script>
+	    $(function () {
+	        $("#mybook").booklet();
+	    });
+    </script>
+
+
+</head>
+
+<body>
+
+<div class="book_wrapper">
+
+<div id="mybook">
+
+	<div>
+		<h3>Дорогая наша По!</h3>
+    <p>Поздравляю с Днем Рождения!Счастья, радости, веселья!Пусть твой новый в жизни год!</p>
+    <p> Поздравляю с Днем Рождения!Счастья, радости, веселья!Пусть твой новый в жизни год  </p>
+	<p> Поздравляю с Днем Рождения!Счастья, радости, веселья!Пусть твой новый в жизни год  </p>
+    <p class="signature"> 05.12.2017</p>
+    <p class="signature">Алёна, Зарина, Маша</p>
+			</div>
+	<div>
+<p class="person">Алёна Есимова</p>
+		     <a href="alyonaimg.html" target="_blank"><img src="images/alyona.jpg" alt="Alyona"/></a>
+
+			</div>
+	<div>
+
+<h2 class="title">Наши пожелания</h2>
+		<p class="wish"> <span class="first">Полин </span>  Полин, с Днём Рождения, Полин!
+Желаю всяческих приятных эмоций и впечатлений, весёлых весёлостей, радостных радостей, невероятных невероятностей, богатого словарного запаса (более богатого, чем у автора поздравления), добрых друзей рядом, незабываемых путешествий и огромнейших успехов во всех сферах жизни!  Урааааааа! 
+ </p>
+		<a href="alyona.html" target="_blank" class="article">Wish Video</a>
+
+	</div>
+	<div>
+		<p class="person">Зарина Акбашева</p>
+         <a href="zarinaimg.html" target="_blank"><img src="images/zarina11.jpg" alt="Zarina"/></a>
+	</div>
+	<div>
+    <h2 class="title"> Наши пожелания</h2>
+		<p class="wish"><span class="first">Полина</span>, поздравляю тебя с твоим чудесным и замечательным днем рождения. Пусть этот день принесет тебе много радости, любви, смеха и улыбок! Желаю чтобы твоя жизнь была наполнена прекрасными событиями, радостными моментами, верными друзьями и только положительными эмоциями. Будь счастлива, здорова и любима! Урррра!</p>  
+    <a href="zarina.html" target="_blank" class="article">Wish Video</a>
+
+	</div>
+	<div>
+		<p class="person">Мария Плеханова</p>
+              <a href="mashaimg.html" target="_blank"><img id ="masha" src="images/masha.jpg" alt="Masha"/></a>
+	</div>
+	<div>
+    <h2 class="title"> Наши пожелания</h2>
+    <p class="wish"><span class="first">Дорогая </span>наша, Полиночка! Я желаю тебе быть радостной, любимой и самой счастливой!
+Побольше солнечных дней, встреч с родными и друзьями. Меньше нервов на работе, больше сна и не болеть. С днем рождения тебя!!! Ура! Ура! Ураааа!
+</p>
+    <a href="masha.html" target="_blank" class="article">Wish Video</a>
+	</div>
+	
+		<p class="back">Happy Birthday, Polly! <br />
+    Be happy, healthy and wealthy!<br/> <br/>Cheers!</p>
+	</div>
+
+</div>
+
+
+
+
+
+
+        <script type="text/javascript">
+			$(function() {
+				var $mybook 		= $('#mybook');
+				var $bttn_next		= $('#next_page_button');
+				var $bttn_prev		= $('#prev_page_button');
+				var $loading		= $('#loading');
+				var $mybook_images	= $mybook.find('img');
+				var cnt_images		= $mybook_images.length;
+				var loaded			= 0;
+				//preload all the images in the book,
+				//and then call the booklet plugin
+
+				$mybook_images.each(function(){
+					var $img 	= $(this);
+					var source	= $img.attr('src');
+					$('<img/>').load(function(){
+						++loaded;
+						if(loaded == cnt_images){
+							$loading.hide();
+							$bttn_next.show();
+							$bttn_prev.show();
+							$mybook.show().booklet({
+								name:               null,                            // name of the booklet to display in the document title bar
+								width:              800,                             // container width
+								height:             500,                             // container height
+								speed:              600,                             // speed of the transition between pages
+								direction:          'LTR',                           // direction of the overall content organization, default LTR, left to right, can be RTL for languages which read right to left
+								startingPage:       0,                               // index of the first page to be displayed
+								easing:             'easeInOutQuad',                 // easing method for complete transition
+								easeIn:             'easeInQuad',                    // easing method for first half of transition
+								easeOut:            'easeOutQuad',                   // easing method for second half of transition
+
+								closed:             true,                           // start with the book "closed", will add empty pages to beginning and end of book
+								closedFrontTitle:   null,                            // used with "closed", "menu" and "pageSelector", determines title of blank starting page
+								closedFrontChapter: null,                            // used with "closed", "menu" and "chapterSelector", determines chapter name of blank starting page
+								closedBackTitle:    null,                            // used with "closed", "menu" and "pageSelector", determines chapter name of blank ending page
+								closedBackChapter:  null,                            // used with "closed", "menu" and "chapterSelector", determines chapter name of blank ending page
+								covers:             false,                           // used with  "closed", makes first and last pages into covers, without page numbers (if enabled)
+
+								pagePadding:        10,                              // padding for each page wrapper
+								pageNumbers:        true,                            // display page numbers on each page
+
+								hovers:             false,                            // enables preview pageturn hover animation, shows a small preview of previous or next page on hover
+								overlays:           false,                            // enables navigation using a page sized overlay, when enabled links inside the content will not be clickable
+								tabs:               false,                           // adds tabs along the top of the pages
+								tabWidth:           60,                              // set the width of the tabs
+								tabHeight:          20,                              // set the height of the tabs
+								arrows:             false,                           // adds arrows overlayed over the book edges
+								cursor:             'pointer',                       // cursor css setting for side bar areas
+
+								hash:               false,                           // enables navigation using a hash string, ex: #/page/1 for page 1, will affect all booklets with 'hash' enabled
+								keyboard:           true,                            // enables navigation with arrow keys (left: previous, right: next)
+								next:               $bttn_next,          			// selector for element to use as click trigger for next page
+								prev:               $bttn_prev,          			// selector for element to use as click trigger for previous page
+
+								menu:               null,                            // selector for element to use as the menu area, required for 'pageSelector'
+								pageSelector:       false,                           // enables navigation with a dropdown menu of pages, requires 'menu'
+								chapterSelector:    false,                           // enables navigation with a dropdown menu of chapters, determined by the "rel" attribute, requires 'menu'
+
+								shadows:            true,                            // display shadows on page animations
+								shadowTopFwdWidth:  166,                             // shadow width for top forward anim
+								shadowTopBackWidth: 166,                             // shadow width for top back anim
+								shadowBtmWidth:     50,                              // shadow width for bottom shadow
+
+								before:             function(){},                    // callback invoked before each page turn animation
+								after:              function(){}                     // callback invoked after each page turn animation
+							});
+							Cufon.refresh();
+						}
+					}).attr('src',source);
+				});
+
+			});
+        </script>
+</body>
+
+</html>
